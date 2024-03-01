@@ -1,0 +1,173 @@
+.mainSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dpurple-color);
+  /* row-gap: 50px; */
+  margin-bottom: 60px;
+
+}
+
+.containerText {
+  position: relative;
+  margin-top: 280px;
+}
+
+.button1 {
+  margin-top: 0.8rem;
+}
+
+.head1 {
+  font-size: 38px;
+  color: var(--gold-color);
+  font-weight: bold;
+  margin: 1.2rem;
+
+}
+
+.image {
+  position: absolute;
+  max-width: 390px;
+}
+
+.topRight {
+  top: 90px;
+  right: 90px;
+
+}
+
+.bottomLeft {
+  bottom: 130px;
+  left: 150px;
+
+}
+
+@media (max-width: 850px) {
+  .mainSection {
+    row-gap: 10px;
+  }
+
+  .head1 {
+    font-size: 30px;
+    margin: 1.6rem 0 0.5rem 0;
+  }
+
+  .button1 {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .topRight {
+    top: 70px;
+    right: 50px;
+  }
+
+  .bottomLeft {
+    bottom: 50px;
+    left: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mainSection {
+    row-gap: 20px;
+    align-items: end;
+  }
+
+  .head1 {
+    font-size: 28px;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .button1 {
+    width: 200px;
+    max-width: 200px;
+  }
+
+  .image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .topRight {
+    top: 150px;
+    right: 70px;
+
+  }
+
+  .bottomLeft {
+    bottom: 75px;
+    left: 100px;
+
+  }
+}
+
+
+@media (max-width: 450px) {
+  .mainSection {
+    row-gap: 30px;
+  }
+
+  .head1 {
+    font-size: 27.5px;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .button1 {
+    width: 200px;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+  .bottomLeft {
+    bottom: 70px;
+    left: 60px;
+  }
+  .topRight {
+    top: 130px;
+    left: 260px;
+
+  }
+}
+
+@media (max-width: 350px) {
+  .mainSection {
+    row-gap: 10px;
+  }
+
+  .head1 {
+    font-size: 23px;
+    margin: 1.6rem 0 0.5rem 0;
+  }
+
+  .button1 {
+    width: 100px;
+    max-width: 100px;
+  }
+
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .topRight {
+    top: 175px;
+    right: 50px;
+  }
+
+  .bottomLeft {
+    bottom: 135px;
+    left: 60px;
+
+  }
+
+}

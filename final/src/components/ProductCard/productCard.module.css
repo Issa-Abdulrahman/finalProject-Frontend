@@ -1,0 +1,144 @@
+.container {
+  /* width: 300px; 
+  height: 400px;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  border-radius: 15px;
+}
+
+.cardContainer {
+  padding: 2rem 1rem;
+  /* width: 400px; */
+  /* height: 350px; */
+
+
+}
+
+.cardContent {
+  border-radius: 1.45rem;
+  overflow: hidden;
+  background-color: var(--bgray-color);
+
+}
+
+.cardArticle {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardArticle:hover .cardData {
+  bottom: 0;
+}
+
+
+.cardArticle:hover .cardImage {
+  justify-content: flex-start;
+}
+
+.cardImage {
+  position: relative;
+  background-color: var(--bgray-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.cardShadow {
+  width: 200px;
+  height: 200px;
+  background-color: var(--lblack-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(55px);
+
+}
+
+.cardData {
+  background-color: var(--lpurple-color);
+  padding: 1.5rem 2rem;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: -7.5rem;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardImage img {
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.cardName {
+  font-size: 15px;
+  color: var(--bgray-color);
+  margin-bottom: 0.75rem;
+}
+
+.cardDescription {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  color: var(--bgray-color);
+}
+
+.cardBtn {
+  display: inline-block;
+  background-color: var(--gold-color);
+  padding: 0.20rem 1.2rem;
+  border-radius: var(--border-radius);
+  color: var(--dpurple-color);
+  font-weight: 600;
+}
+
+.cardBtn:hover {
+  background-color: var(--bgray-color);
+}
+
+@media (max-width: 450px) {
+  .cardContainer {
+    padding: 3rem 1rem;
+  }
+
+  .cardContent {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .cardContainer {
+    padding: 2rem 0.5rem;
+  }
+
+  .cardContent {
+    margin: 0 0.5rem;
+  }
+
+  .cardArticle {
+    width: 250px;
+  }
+}

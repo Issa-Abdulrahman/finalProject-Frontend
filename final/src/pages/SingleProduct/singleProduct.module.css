@@ -1,0 +1,124 @@
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.singleProduct{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 14rem;
+    background-color: var(--purple-color);
+    overflow: hidden;
+    text-align: left;
+    font-size: 50px;
+}
+.cardBtn{
+  display: inline-block;
+  background-color: var(--bgray-color);
+  padding: 0.1rem 2.7rem;
+  width: 10rem;
+  font-size: 30px;
+  height: 55px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  color: var(--dpurple-color);
+  font-weight: 550;
+}
+.cardBtn:hover{
+  background-color: var(--gold-color);
+}
+.title{
+    color: var(--gold-color);
+    font-weight: bold;
+    margin-right: 50px;
+    position: relative;
+    font-size: 45px;
+    
+}
+.description{
+    color: var(--bgray-color);
+    font-size: 23px;
+    position: relative;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+.type{
+  color: var(--bgray-color);
+  font-size: 28px;
+  position: relative;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+.price{
+    
+    font-size: 25px;
+    text-align: left;
+    color: var(--gold-color);
+    font-weight: bold;
+    
+}
+
+.left{
+    flex: 1;
+    margin-top: 2rem;
+
+}
+
+.right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right img{
+    max-width: 80%;
+    width: 100%;
+    height: auto;
+    /* margin-left: 1rem; */
+    /* margin-bottom: 5rem; */
+}
+.freeDelivery {
+    font-size: 20px;
+    color: var(--bgray-color);
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    .singleProduct {
+      font-size: 17px;
+      padding: 0.8rem;
+      margin-left: 0.5rem;
+      flex-direction: column-reverse;
+    }
+  
+    .description {
+      font-size: 12px;
+    }
+  
+    .price {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .singleProduct {
+      font-size: 12px;
+      margin-right: 1rem;
+      flex-direction: column-reverse;
+    }
+  
+    .description {
+      font-size: 10px;
+    }
+  
+    .price {
+      font-size: 14px;
+    }
+  }
