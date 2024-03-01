@@ -14,7 +14,7 @@ const SingleProductPage = () => {
     const slug = slugObj.slug
     useEffect(()=>{
         const fetchSignle = async () =>{
-            const res = await axios.get(`http://localhost:5000/product/getone/${slug}`) ;
+            const res = await axios.get(`${process.env.REACT_APP_BACKEND}product/getone/${slug}`) ;
             setProduct(res.data)
         }   
 
@@ -45,7 +45,7 @@ const SingleProductPage = () => {
             </div>
             <div className={styles.right}>
                 <img className={styles.productImage}
-                    src={`http://localhost:5000/images/${product && product.image}`}
+                    src={`${process.env.REACT_APP_BACKEND}images/${product && product.image}`}
                     alt="kitkat 320"
                 />
             </div>

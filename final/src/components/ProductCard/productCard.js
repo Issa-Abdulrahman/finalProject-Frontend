@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
                 <div className={styles.cardContent}>
                     <div className={styles.cardArticle}>
                         <div className={styles.cardImage}>
-                            <img src={`http://localhost:5000/images/${product.image}`} alt={product.name} />
+                            <img src={`${process.env.REACT_APP_BACKEND}images/${product.image}`} alt={product.name} />
                             <div className={styles.cardShadow}></div>
                         </div>
                         <div className={styles.cardData}>

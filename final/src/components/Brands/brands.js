@@ -41,7 +41,7 @@ function Brands ({onSelectedBrand}){
           {brands.map((brands, index) => (
             <div key={index} className={styles.categorybox} 
             onClick={() => handleBrandClick(brands._id)}>
-              <img src={`http://localhost:5000/images/${brands.image}`} 
+              <img src={`${process.env.REACT_APP_BACKEND}images/${brands.image}`} 
               alt={brands.name} />
               </div>
           ))}</div>

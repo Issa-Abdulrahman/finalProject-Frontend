@@ -39,7 +39,7 @@ const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/user/signup", formData);
+      const response = await axios.post("${process.env.REACT_APP_BACKEND}user/signup", formData);
       console.log(response);
       toast.success("Sign Up Successfuly", response.message);
       navigate("/");

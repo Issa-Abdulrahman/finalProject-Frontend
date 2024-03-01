@@ -11,7 +11,7 @@ const SingleProduct = () => {
 
     useEffect(()=>{
         const fetchSignle = async () =>{
-            const res = await axios.get(`http://localhost:5000/product/getone/${slogan}`) ;
+            const res = await axios.get(`${process.env.REACT_APP_BACKEND}product/getone/${slogan}`) ;
             setProduct(res.data)
         }   
 
