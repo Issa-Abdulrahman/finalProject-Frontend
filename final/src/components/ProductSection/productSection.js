@@ -33,6 +33,7 @@ const LatestProductsSection = () => {
     >
       <h1 className={styles.h1}>Latest Product</h1>
       <section className={styles.container}>
+        {/* You should give this class the flex */}
         <div className={styles.cardContainer}>
           {latestProducts.map((product, index) => (
             <ProductCard key={index} product={product} />

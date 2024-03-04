@@ -17,7 +17,7 @@
   justify-content: space-around;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .cardContainer {
     padding: 1rem;
     flex-direction: column;

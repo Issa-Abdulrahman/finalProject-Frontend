@@ -24,3 +24,6 @@
   --border-radius: 10px;
 
 }
+html {
+  scroll-behavior: smooth;
+}

@@ -5,14 +5,15 @@
   align-items: center;
   justify-content: center;
   background-color: var(--dpurple-color);
-  /* row-gap: 50px; */
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
+  height: 100vh;
 
 }
 
 .containerText {
   position: relative;
-  margin-top: 280px;
+  z-index: 33;
+  /* margin-top: 360px; */
 }
 
 .button1 {
@@ -39,7 +40,7 @@
 }
 
 .bottomLeft {
-  bottom: 130px;
+  bottom: 30px;
   left: 150px;
 
 }
@@ -129,7 +130,7 @@
     height: 150px;
   }
   .bottomLeft {
-    bottom: 70px;
+    bottom: 150px;
     left: 60px;
   }
   .topRight {

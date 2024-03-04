@@ -92,13 +92,13 @@ function NavBar() {
                         </NavLink>
                     </li>
                     <li className={styles.li} onClick={handleScrollToAbout}>
-                    <NavLink
+                    <a
                         className={location.pathname === "/" ? styles.activeLink : styles.link}
                         style={{ color: "var(--bgray-color" }}
-                        to={"/"}
+                        href={"#about"}
                         onClick={() => setMenuOpen(false)}>
                         About
-                    </NavLink>
+                    </a>
                 </li>
                     <li className={styles.li}>
                         <NavLink  className={location.pathname === "/" ? 

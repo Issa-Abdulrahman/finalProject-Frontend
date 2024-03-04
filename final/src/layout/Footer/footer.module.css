@@ -13,7 +13,9 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+  .logo__link {
+    text-decoration: none;
+  }
   .logo {
     color: var(--gold-color);
     margin-top: 15px;
@@ -52,6 +54,7 @@
   
   .socialMedia {
     display: flex;
+    justify-content: center;
   }
   
   .icon {
@@ -70,9 +73,9 @@
     height: auto;
   }
   @media (max-width: 768px) {
-    .footer{
+    /* .footer{
         background-position: center;
-    }
+    } */
     .section {
       max-width: 90%;
       flex-direction: column;
@@ -95,6 +98,7 @@
   
     .imageContainer img {
       max-width: 100%;
+      padding-top: 20px;
     }
   }
   

@@ -1,3 +1,14 @@
 .brands{
-    margin-top: 27rem;
+    /* min-height:100vh ; */
 }
+
+.about{
+    /* height: 80vh; */
+    display: flex
+}
+/* min-height: 100vh; */
+
+.product{
+    padding-bottom: 150px;
+    /* min-height: 100vh; */
+} 

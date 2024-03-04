@@ -15,8 +15,9 @@ const AboutUs = () => {
                 duration: 0.6,
             }}
         >
+            <h1 className={styles.heading2}>About</h1>
+            <div className={styles.wrapper}>
             <div className={styles.main}>
-                {/* <h1 className={styles.heading2}>About</h1> */}
                 <h3 className={styles.title}>
                     ChocoPuff
                 </h3>
@@ -32,6 +33,7 @@ const AboutUs = () => {
                     loading="eager"
                     alt="about us chocoPuff"
                     src={signin} />
+            </div>
             </div>
         </motion.section>
     )

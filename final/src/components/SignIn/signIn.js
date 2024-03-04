@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Styles from "./signIn.module.css"
 import { Button, TextField } from "@mui/material";
 import { FcGoogle } from "react-icons/fc";
 import hide from "../../assets/Icons/hide.png"
 import eye from "../../assets/Icons/eye.png"
 import signin from "../../assets/Images/signin.png";
+import axiosInstance from "../../utils/axiosInstance";
+import  { Link, useNavigate } from "react-router-dom";
+import {toast} from "react-toastify";
+import {signInWithPopup} from "firebase/auth";
+import { auth, provider } from '../../Firebase';
+import { AuthContext } from "../../context/AuthContext";
+import apiCall from "../../hooks/useApi";
+
+
+
+
 
 function Signin() {
-
+  const { setUser, fetchUserData } = useContext(AuthContext);
+  const [isPending, setIsPending] = useState(false);
+  // const useApi =  useApi();
+  const navigate = useNavigate();
+  const [disabled, setDisabled] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const visiblePassword = () => {
     setShowPassword(!showPassword);
@@ -24,18 +39,107 @@ function Signin() {
       [name]: value
     })
   };
+
+  //signin
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setIsPending(true);
+    if(!formData.email || !formData.password){
+      toast.error( "Please fill out all fields");
+      setIsPending(false);
+
+    }else{
+      setFormData({
+        email:"",
+        password:"",
+      });
+      try{
+        await apiCall({
+          url: "/user/login",
+          method : "post",
+          data: {
+            email: formData.email,
+            password: formData.password,
+            role: "user",
+          }
+        });
+        await fetchUserData();
+        toast.success( "Logged in successfully!");
+        setIsPending(false);
+        navigate("/");
+      } catch(error){
+        if(
+          error.response &&
+          error.response.data &&
+          error.response.data.errors
+        ){
+          const {errors} = error.response.data;
+          if(errors.email) {
+            const emailError = errors.email;
+            toast.error(emailError);
+          }
+          if (errors.password){
+            const passwordError = errors.password;
+            toast.error(passwordError);
+          }
+        } else{
+          toast.error(error.messgae);
+        }
+        setIsPending(false);
+      }
+    }
+  };
+
+  //google signIn
+  const handleGoogle = async () =>{
+    try{
+      const data = await signInWithPopup( auth, provider);
+      setDisabled(!disabled);
+      const res = await axiosInstance.post(
+        "/user/gsignup",
+        {
+          name: data.user.displayName,
+          email: data.user.email,
+          role: "guest"
+        },
+        {
+          headers:{
+            "Content-Type": "multipart/form-data"
+          }
+        }
+      );
+      setIsPending(false);
+      toast.success("Signed in Successfully");
+      if(res){
+        setUser(res.data.token.data);
+        console.log(res.data.token.data);
+        setDisabled(!disabled);
+
+      }else{
+        setUser("no user found");
+      }
+      navigate("/");
+    } catch (err) {
+      setDisabled(false);
+      if(err.code === "auth/popup-closed-by-user"){
+        console.log("exited the google auth");
+      }
+    }
+  }
+
   return (
     <>
       <div className={Styles.signin}>
         <h1 className={Styles.welcome}>Welcome Back!</h1>
 
 
-        <form className={Styles.form}>
+        <form className={Styles.form} >
 
           <Button
             // fullWidth
             className={Styles.button}
-            // onClick={handleGoogle}
+            onClick={handleGoogle}
             variant="contained"
             sx={{
               
@@ -52,7 +156,7 @@ function Signin() {
             }}
             color="primary"
           >
-            sign inwith google
+            sign in with google
             <FcGoogle
               className={Styles.gg}
             />
@@ -111,7 +215,10 @@ function Signin() {
                 <Button
                   className={Styles.button1}
                   disableElevation={true}
+                  type="submit"
+                  disabled={isPending}
                   variant="contained"
+                  onSubmit={handleSubmit}
                   sx={{
                     color: "var(--dpurple-color)",
                     fontSize: "18.4",
@@ -125,7 +232,7 @@ function Signin() {
 
                   }}
                 >
-                  Sign up
+                  Sign in
                 </Button>
               </div>
             </div>

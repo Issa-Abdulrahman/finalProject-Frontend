@@ -20,7 +20,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <Link to={"/"}>
+          <Link to={"/"} className={styles.logo__link}>
           <h1 className={styles.logo}>ChocoPuff</h1>
           </Link>
           <div className={styles.socialMedia}>
