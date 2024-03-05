@@ -33,7 +33,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: transparent;
-  background-color: rgb(255 255 255 / 40%);
+  background-color: rgba(51, 47, 47, 0.4);
   backdrop-filter: blur(19px);
 }
 
@@ -144,7 +144,7 @@
   .dropdown {
     background-color: var(--blur-color); 
     /* Change the background color */
-    background-color: rgb(255 255 255 / 50%);
+    background-color: rgba(59, 52, 52, 0.5);
     position: absolute;
     top: 120px;
     right: 0;
