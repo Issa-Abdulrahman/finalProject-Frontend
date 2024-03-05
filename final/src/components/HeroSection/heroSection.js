@@ -14,7 +14,7 @@ function HeroSection() {
                     <div className={style.containerText}>
                         <h1 className={style.head1}>Speak the language of happiness ! </h1>
                         <h2 className={style.head1}>Get Closer</h2>
-                        <Link to={"/signup"}>
+                        <Link to={"/products"}>
                         <Button
                             className={style.button1}
                             disableElevation={true}
@@ -22,7 +22,7 @@ function HeroSection() {
                             
                             sx={{
                                 color: "var(--dpurple-color)",
-                                fontSize: "18.4",
+                                fontSize: "22",
                                 backgroundColor: "var(--bgray-color)",
                                 borderRadius: "15px",
                                 fontWeight: "bold",
@@ -33,7 +33,7 @@ function HeroSection() {
 
                             }}
                         >
-                            Sign up
+                            Discover 
                         </Button>
                         </Link>
                     </div>
