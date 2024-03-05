@@ -65,56 +65,81 @@
     }
 } */
 
+ .group {
+     margin: 30px auto;
+     max-width: 520px;
+     height: auto;
+ }
 
-.mainsection {
-    margin: 50px auto;
+ .mainsection {
+     margin: 50px auto;
 
-}
-.heading2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--gold-color);
-    font-size: 50px;
-    margin-bottom: 100px;
-}
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 150px;
-}
-.main, .imageContainer {
-width: 50%;
-}
-.imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.title{
-    font-size: 3rem;
-    color: var(--gold-color);
-    margin: 2.5rem auto;
-    font-weight: bold;
-}
-.description{
-    margin-bottom: 2rem;
-    font-size: 25px;
-    line-height: 40px;
-    color: var(--bgray-color);
-    text-align: left;
-}
-.img {
-    max-width: 100%;
-}
-@media (max-width: 600px) {
-    .wrapper {
-flex-direction: column;
-/* margin: 0 50px; */
-margin: 0;
-    } 
-    .main, .imageContainer {
-        width: 100%;
-        }
-}
+ }
+
+ .heading2 {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     color: var(--gold-color);
+     font-size: 50px;
+     margin-bottom: 100px;
+ }
+
+ .wrapper {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0 150px;
+
+     /* width: 100%; */
+ }
+
+ .main,
+ .img {
+     width: 50%;
+ }
+
+ .title {
+     font-size: 3rem;
+     color: var(--gold-color);
+     margin: 2.5rem auto;
+     font-weight: bold;
+ }
+
+ .description {
+     margin-bottom: 2rem;
+     font-size: 30px;
+     line-height: 40px;
+     color: var(--bgray-color);
+     text-align: left;
+ }
+
+ .img {
+     max-width: 100%;
+     width: 80%;
+ }
+
+ @media (max-width: 600px) {
+     .wrapper {
+         flex-direction: column;
+         /* margin: 0 50px; */
+         margin: 0;
+     }
+
+     .description{
+        font-size: 22px;
+        margin: 0 30px;
+     }
+
+     .main {
+         margin: 0 auto;
+     }
+     .img{
+        margin-top:  54px;
+     }
+
+     .main,
+     .img {
+         width: 100%;
+     }
+ }

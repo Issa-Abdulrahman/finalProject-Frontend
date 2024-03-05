@@ -18,9 +18,7 @@ const AboutUs = () => {
             <h1 className={styles.heading2}>About</h1>
             <div className={styles.wrapper}>
             <div className={styles.main}>
-                <h3 className={styles.title}>
-                    ChocoPuff
-                </h3>
+
                 <p className={styles.description}>
                     ChocoPuff is here to provide a seamless and enjoyable navigation through a large numbers of chcolate brands.
                     It aims to offer a diverse selection of chocolate boxes
@@ -28,12 +26,12 @@ const AboutUs = () => {
                     
                 </p>
             </div>
-            <div className={styles.imageContainer}>
+           
                 <img className={styles.img}
                     loading="eager"
                     alt="about us chocoPuff"
                     src={signin} />
-            </div>
+           
             </div>
         </motion.section>
     )

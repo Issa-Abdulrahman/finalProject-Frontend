@@ -1,10 +1,10 @@
 import React from "react";
-import Signin from "../../components/SignIn/signIn.js";
+import NewSignIn from "../../components/NewSignIn/newSignIn.js";
 
 function SignIn(){
     return(
         <div>
-            <Signin/>
+            <NewSignIn/>
         </div>
     )
 }
