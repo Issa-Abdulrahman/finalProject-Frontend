@@ -33,7 +33,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: transparent;
-  background-color: rgba(51, 47, 47, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(19px);
 }
 
@@ -140,11 +140,14 @@
     display: block;
     margin-left: 20px;
   }
+  /* .nav{
+    position: fixed;
+  } */
 
   .dropdown {
     background-color: var(--blur-color); 
     /* Change the background color */
-    background-color: rgba(59, 52, 52, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 120px;
     right: 0;
@@ -176,7 +179,7 @@
     height: 90vh;
     width: 98vw;
     margin: 0 auto;
-    right: 10px;
+    right: 50px;
 
     border-radius: 40px 0;
   }
@@ -215,3 +218,4 @@
     transition: all 500ms ease;
   }
 }
+

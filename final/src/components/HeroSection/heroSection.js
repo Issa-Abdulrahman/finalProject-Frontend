@@ -22,13 +22,13 @@ function HeroSection() {
                             
                             sx={{
                                 color: "var(--dpurple-color)",
-                                fontSize: "22",
+                                fontSize: "35",
                                 backgroundColor: "var(--bgray-color)",
                                 borderRadius: "15px",
                                 fontWeight: "bold",
-                                // padding: "10px",
+                                // padding: "8px",
                                 "&:hover": { background: "var(--gold-color)" },
-                                width: 426,
+                                width: 180,
                                 height: 48,
 
                             }}

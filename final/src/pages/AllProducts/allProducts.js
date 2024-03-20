@@ -7,10 +7,13 @@ import axios from "axios";
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [selectedBrand, setSelectedBrand] = useState(null);
+    const [loding, setLoading] = useState(true);
     const backendUrl = process.env.REACT_APP_BACKEND;
 
     useEffect(() => {
         const fetchData = async () => {
+            try {
+                setLoading(true);
             if (selectedBrand) {
                 const res = await axios.get(`${backendUrl}product/getby/${selectedBrand}`);
                 setProducts(res.data);
@@ -18,6 +21,11 @@ const AllProducts = () => {
                 const res = await axios.get(`${backendUrl}product/getall`);
                 setProducts(res.data);
             }
+        } catch(error){
+            console.error("Error fetching data:", error);
+        } finally{
+            setLoading(false);
+        }
         };
 
         fetchData();
@@ -30,11 +38,19 @@ const AllProducts = () => {
     return (
         <div className={styles.container}>
             <div className={styles.brands}>
+            {loding ? (
+                    <div className={styles.loading}>
+                        <p>Loading...</p>
+                    </div>) : (
                 <Brands onSelectedBrand={handleBrandSelect} />
+                    )}
             </div>
             <div className={styles.card_container}>
                 <h1 className={styles.h1}>All Products</h1>
-
+                {loding ? (
+                    <div className={styles.loading}>
+                        <p>Loading...</p>
+                    </div>) : (
                 <div className={styles.cards}>
                     {products && products.map((product, index) => (
                         <div key={index} className={styles.card}>
@@ -43,7 +59,7 @@ const AllProducts = () => {
                         </div>
                     ))}
                 </div>
-
+                    )}
             </div>
         </div>
     );
