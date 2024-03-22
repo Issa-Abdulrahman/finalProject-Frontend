@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const SingleProductPage = () => {
     const slugObj = useParams()
     const [product , setProduct] = useState({});
-    const phoneNumber = "0096181152522"
+    const phoneNumber = "+96170434831"
     const message =    `Hello, I'm intersted in purchasing ${product.name} for ${product.price} $`
 
     const slug = slugObj.slug

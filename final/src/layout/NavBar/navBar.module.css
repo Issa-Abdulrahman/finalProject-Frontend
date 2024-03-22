@@ -27,6 +27,7 @@
 
 .nav {
   height: 90px;
+  /* position: fixed; */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -140,9 +141,12 @@
     display: block;
     margin-left: 20px;
   }
-  /* .nav{
+  .logo{
+    font-size: 30px;
+  }
+  .nav{
     position: fixed;
-  } */
+  }
 
   .dropdown {
     background-color: var(--blur-color); 

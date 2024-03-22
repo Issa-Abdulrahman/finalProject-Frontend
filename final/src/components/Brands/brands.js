@@ -33,7 +33,7 @@ function Brands ({onSelectedBrand}){
         <>
         <section id="category">
         <div className={styles.categoryheading}>
-          <h2>Our Brands</h2>
+          <h2 className={styles.h2}>Our Brands</h2>
         </div>
         </section>
         <div className={styles.Allcategorycard}>

@@ -28,6 +28,7 @@
     color: var(--bgray-color);
     letter-spacing: 0.5px;
   }
+
   
 
   .categorycontainer {
@@ -87,6 +88,12 @@
     flex: 1 0 50%;
     gap: 20px;
 
+  }
+  .categoryheading h2 {
+    font-size: 1.56rem;
+    font-weight: 600;
+    color: var(--bgray-color);
+    letter-spacing: 0.5px;
   }
   .categorycontainer {
     flex: 1 0 100%;

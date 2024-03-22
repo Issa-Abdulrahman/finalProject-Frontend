@@ -100,7 +100,7 @@ function NavBar() {
                         About
                     </a>
                 </li>
-                    <li className={styles.li}>
+                    {/* <li className={styles.li}>
                         <NavLink  className={location.pathname === "/" ? 
                         styles.activeLink : styles.link} 
                         style={{ color: "var(--bgray-color" }} 
@@ -117,7 +117,7 @@ function NavBar() {
                         onClick={() => setMenuOpen(false)}>
                             Sign In
                         </NavLink>
-                    </li>
+                    </li> */}
                 </ul>
                 <div className={styles.hamburger} onClick={handleMenuClick}>
                     <Humburger 
