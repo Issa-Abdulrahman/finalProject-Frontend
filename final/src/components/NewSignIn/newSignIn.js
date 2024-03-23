@@ -1,28 +1,4 @@
-// import React from "react";
-// import styles from "./newSignIn.module.css";
-// import oreoIbrahim from "../../assets/Images/oreoIbrahim.jpeg"
-// import milkaIbrahim from "../../assets/Images/milkaIbrahim.jpeg"
-// function NewSignIn() {
-//     return (
-//         <>
-//             <div className={styles.container}>
-//                 <div className={styles.title}>Thank you for your interest</div>
-//                 <div className={styles.paragraph}>
-//                     Welcome to ChocoPuff, your ultimate destination for all things chocolate!
-//                     As we embark on this delicious journey together,
-//                     we're excited to share that in the upcoming phases of scaling our website,
-//                     we'll be introducing user sign-up functionality.
-//                     By signing up, you'll unlock exclusive offers and benefits to elevate your chocolate shopping experience.
-//                     Stay tuned as we sweeten the deal and make your ChocoPuff experience even more delightful.
-//                     In the meantime, browse our delectable selection and indulge in the world of chocolate wonders!
-//                 </div>
-//                 <div className={styles.imageContainer}>
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
-// export default NewSignIn;
+
 import React from "react";
 import Styles from "./newSignIn.module.css";
 import { Link } from "react-router-dom";
