@@ -19,15 +19,15 @@
 
 @media (max-width: 768px) {
   .cardContainer {
-    /* padding: 1rem; */
+    padding: 1rem;
     flex-direction: column;
     align-items: center;
     
   }
 }
 
-/* @media (max-width: 350px) {
+@media (max-width: 350px) {
   .cardContainer {
     padding: 0.5rem;
   }
-} */
+}

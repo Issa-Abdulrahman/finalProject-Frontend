@@ -78,7 +78,7 @@
   transition: all 0.3s ease-in-out;
   text-align: center;
   position: absolute;
-  width: 100%;
+  width: 85%;
   bottom: -7.5rem;
   z-index: 3;
   transition: all 0.7s ease-in-out;
